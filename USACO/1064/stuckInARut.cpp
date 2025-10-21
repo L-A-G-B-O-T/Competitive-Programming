@@ -1,7 +1,9 @@
 #include <iostream>
 #include <vector>
-#include <map>
-#include <set>
+//#include <map>
+#include <unordered_map>
+//#include <set>
+#include <unordered_set>
 
 using namespace std;
 
@@ -9,7 +11,7 @@ struct Cow {
     char direction;
     int xPos, yPos;
     int xPosStart, yPosStart;
-    set <Cow*> victims; 
+    unordered_set <Cow*> victims; 
     int blame;
 };
 
@@ -24,13 +26,16 @@ void calcBlame(Cow* c){
 }
 
 int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
     int N; 
     cin >> N;
     vector <Cow> cows(N);
     vector <Cow*> E_cows;
     vector <Cow*> N_cows;
-    map <int, Cow*> E_cow_yPoses;
-    map <int, Cow*> N_cow_xPoses;
+    unordered_map <int, Cow*> E_cow_yPoses;
+    unordered_map <int, Cow*> N_cow_xPoses;
     int E_cow_yPos_max = 0, N_cow_xPos_max = 0;
 
     for (Cow &c : cows){
