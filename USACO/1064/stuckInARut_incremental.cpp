@@ -1,3 +1,5 @@
+//Only passes 6 test cases out of 10; Slows down with wider distances
+
 #include <iostream>
 #include <vector>
 //#include <map>
