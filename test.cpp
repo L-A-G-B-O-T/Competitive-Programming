@@ -6,13 +6,15 @@
 
 using namespace std;
 
+struct Cow {
+    char direction;
+    int xPos, yPos;
+    int blame;
+};
+
 int main() {
-	vector<int> arr{1, 2, 3, 4};
-    set <int> s;
-    s.insert(1);
-    s.insert(3);
-    s.insert(2);
-    s.insert(3);
-	cout << arr << endl;  // just feed it into cout like any other variable
-    cout << s << endl;
+	Cow cow1 = {'N', 0, 0, 0};
+    Cow * subjectCow = &cow1;
+    subjectCow -> blame = 2;
+    cout << subjectCow -> direction << endl;
 }
