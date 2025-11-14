@@ -15,7 +15,7 @@ int main(){
         orderOf[c] = i;
     }
 
-    int ans;
+    int ans = 0;
     int prevOrder = 67;
     string s; cin >> s;
     for (const char &c : s){
